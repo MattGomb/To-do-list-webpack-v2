@@ -1,0 +1,9 @@
+body {
+  background-color: azure;
+}
+
+.hello {
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
+}
