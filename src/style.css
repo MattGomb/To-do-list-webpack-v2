@@ -1,7 +1,9 @@
 body {
-  background-color: bisque;
+  background-color: azure;
 }
 
 .hello {
-  color: red;
+  color: black;
+  font-size: 2rem;
+  font-weight: bold;
 }
