@@ -35,7 +35,7 @@ const removeFromStorage = (id) => {
   if (localStorage.getItem('tasks') !== null) {
     tasks = JSON.parse(localStorage.getItem('tasks'));
   }
-  const newTasks = tasks.filter((task) => task.id != id);
+  const newTasks = tasks.filter((task) => task.id !== id);
   localStorage.setItem('tasks', JSON.stringify(newTasks));
   updateid.storage();
 };
@@ -59,6 +59,9 @@ document.querySelector('#toDoItems').addEventListener('keypress', (e) => {
     e.target.setAttribute('disabled', true);
     e.target.parentElement.nextElementSibling.classList.remove('hidden');
     e.target.parentElement.nextElementSibling.nextElementSibling.classList.add('hidden');
+    const selectedTask = Storage.getTasks().find((task) => task.id === Number(e.target.parentElement.parentElement.id));
+    const selectedDesc = e.target.value;
+    Storage.updateTask(selectedTask, selectedDesc);
   }
 });
 
