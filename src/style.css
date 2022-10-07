@@ -1,7 +1,151 @@
-.hello {
-  color: red;
+@import url('https://fonts.googleapis.com/css2?family=Raleway:ital,wght@0,100;0,200;0,400;0,600;0,700;0,800;1,100;1,200;1,400;1,600;1,700;1,800&display=swap');
+
+* {
+  font-family: 'Raleway', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+header {
+  margin-bottom: 2rem;
+}
+
+.title {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
 }
 
 body {
-  background-color: bisque;
+  background-color: rgb(245, 245, 245);
+  display: block;
+  margin-left: 5%;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 0 2px 5px gray;
+  max-width: 95%;
+}
+
+main p {
+  padding: 1rem;
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+  margin-bottom: 2px;
+  font-weight: bold;
+}
+
+.form {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+#enterbtn,
+#taskInput {
+  padding: 1rem;
+}
+
+#enterbtn {
+  border: none;
+  background-color: transparent;
+}
+
+#taskInput {
+  border: none;
+  width: 95%;
+}
+
+li {
+  display: flex;
+  justify-content: space-between;
+  background-color: white;
+}
+
+li div {
+  width: 95%;
+}
+
+#toDoList ul li div {
+  padding: 1rem 0 1rem 1rem;
+  display: flex;
+}
+
+.checkbox {
+  margin-right: 1rem;
+}
+
+.morebtn,
+#enterbtn {
+  cursor: pointer;
+}
+
+.morebtn {
+  padding: 1rem;
+  border: none;
+  background-color: transparent;
+}
+
+#toDoItems {
+  margin-top: 2px;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+#clearAllBtn {
+  display: flex;
+  background-color: rgb(228, 228, 228);
+  padding: 1rem 1rem 1rem 0.5rem;
+  border: none;
+  color: gray;
+  justify-content: center;
+  font-size: 1.125rem;
+}
+
+.hidden {
+  display: none;
+}
+
+.deletebtn {
+  padding: 0 0.5rem 0 0.5rem;
+  max-height: 3rem;
+  margin: 1rem 0.5rem 1rem 0;
+  background-color: transparent;
+  border: none;
+  font-size: 1.125rem;
+}
+
+.text {
+  padding: 0.25rem;
+  width: 90%;
+  border: none;
+  background-color: transparent;
+}
+
+#toDoItems li input[type='checkbox']:checked + input {
+  text-decoration: line-through;
+}
+
+li:has(.morebtn.hidden) {
+  background-color: rgb(255, 224, 167);
+}
+
+#clearAllBtn,
+.deletebtn {
+  cursor: pointer;
+}
+
+#clearAllBtn:hover {
+  background-color: rgba(255, 0, 0, 0.55);
+  color: black;
+}
+
+#clearAllBtn:active {
+  background-color: rgba(0, 128, 0, 0.55);
+  color: white;
 }
