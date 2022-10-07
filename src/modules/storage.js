@@ -19,11 +19,11 @@ export default class Storage {
   }
 
   static updateTask(task, description) {
-    const tasks =  Storage.getTasks();
+    const tasks = Storage.getTasks();
 
-    const activeTask = tasks.find((selected) => selected.id === task.id)
+    const activeTask = tasks.find((selected) => selected.id === task.id);
 
-    activeTask.description = description
+    activeTask.description = description;
 
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }

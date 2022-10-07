@@ -1,5 +1,5 @@
-import _ from 'lodash';
-import './style.css'
+// import _ from 'lodash';
+import './style.css';
 
 import updateid from './modules/updateid.js';
 
@@ -59,7 +59,8 @@ document.querySelector('#toDoItems').addEventListener('keypress', (e) => {
     e.target.setAttribute('disabled', true);
     e.target.parentElement.nextElementSibling.classList.remove('hidden');
     e.target.parentElement.nextElementSibling.nextElementSibling.classList.add('hidden');
-    const selectedTask = Storage.getTasks().find((task) => task.id === Number(e.target.parentElement.parentElement.id));
+    const selectedTask = Storage.getTasks()
+      .find((task) => task.id === Number(e.target.parentElement.parentElement.id));
     const selectedDesc = e.target.value;
     Storage.updateTask(selectedTask, selectedDesc);
   }
