@@ -8,7 +8,7 @@ env:
 jobs:
   lighthouse:
     name: Lighthouse
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -17,10 +17,10 @@ jobs:
       - name: Setup Lighthouse
         run: npm install -g @lhci/cli@0.7.x
       - name: Lighthouse Report
-        run: lhci autorun --upload.target=temporary-public-storage --collect.staticDistDir=./dist
+        run: lhci autorun --upload.target=temporary-public-storage --collect.staticDistDir=.
   webhint:
     name: Webhint
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -34,7 +34,7 @@ jobs:
         run: npx hint .
   stylelint:
     name: Stylelint
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -48,7 +48,7 @@ jobs:
         run: npx stylelint "**/*.{css,scss}"
   eslint:
     name: ESLint
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
       - uses: actions/setup-node@v1
@@ -62,7 +62,7 @@ jobs:
         run: npx eslint .
   nodechecker:
     name: node_modules checker
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-22.04
     steps:
       - uses: actions/checkout@v2
       - name: Check node_modules existence
