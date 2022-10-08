@@ -1,7 +1,7 @@
 export default class Storage {
   static getTasks() {
     let tasks;
-    if (localStorage.getItem('tasks') === null) {
+    if (!localStorage.getItem('tasks')) {
       tasks = [];
     } else {
       tasks = JSON.parse(localStorage.getItem('tasks'));
