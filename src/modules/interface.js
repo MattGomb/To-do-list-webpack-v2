@@ -4,7 +4,9 @@ export default class Interface {
   static displayTasks() {
     const tasks = Storage.getTasks();
     document.querySelector('#toDoItems').innerHTML = '';
-    tasks.forEach((task) => Interface.addTaskToList(task));
+    if (tasks.length !== 0) {
+      tasks.forEach((task) => Interface.addTaskToList(task));
+    }
   }
 
   static addTaskToList(task) {
