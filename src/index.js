@@ -1,3 +1,4 @@
+/* eslint eqeqeq: 0 */
 // import _ from 'lodash';
 import './style.css';
 
@@ -35,7 +36,7 @@ const removeFromStorage = (id) => {
   if (localStorage.getItem('tasks') !== null) {
     tasks = JSON.parse(localStorage.getItem('tasks'));
   }
-  const newTasks = tasks.filter((task) => task.id !== id);
+  const newTasks = tasks.filter((task) => task.id != id);
   localStorage.setItem('tasks', JSON.stringify(newTasks));
   updateid.storage();
 };
