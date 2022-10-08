@@ -17,7 +17,7 @@
 
 ## Live Demo (if available)
 
-[Live Demo Link](https://livedemo.com)
+[Live Demo Link](https://mattgomb.github.io/To-do-list-webpack-v2/dist/)
 
 
 ## Getting Started
