@@ -1,4 +1,4 @@
-import { updateid } from './updateid.js'
+import  updateid  from './updateid.js'
 
 const removeFromStorage = (id) => {
     let tasks = [];

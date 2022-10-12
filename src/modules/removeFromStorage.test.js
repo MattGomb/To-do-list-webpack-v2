@@ -34,7 +34,7 @@ describe('check the localStorage', () => {
     ];
     removeFromStorage(2);
     const dataStorage = JSON.parse(localStorage.getItem('tasks')) || [];
-    expect(dataStorage).toEqual(task1)
+    expect(dataStorage).toEqual(task1);
   });
 });
 
