@@ -1,6 +1,5 @@
 /** * @jest-environment jsdom */
 
-import updateid from './updateid.js';
 import removeFromStorage from './removeFromStorage.js';
 
 window.localStorage = Storage.prototype;
