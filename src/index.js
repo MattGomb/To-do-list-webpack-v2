@@ -1,4 +1,4 @@
-import './style.css';
+// import './style.css';
 
 import updateid from './modules/updateid.js';
 
@@ -89,3 +89,5 @@ document.querySelector('#clearAllBtn').addEventListener('click', () => {
   updateid.storage();
   Interface.displayTasks();
 });
+
+export default removeFromStorage;
