@@ -1,6 +1,6 @@
 /** * @jest-environment jsdom */
 
-import removeFromStorage from './removeFromStorage.js';
+import removeFromStorage from '../removeFromStorage.js';
 
 window.localStorage = Storage.prototype;
 
@@ -17,7 +17,7 @@ const newTasks = [
     id: 2,
     completed: false,
     editable: false,
-  }
+  },
 ];
 
 localStorage.setItem('tasks', JSON.stringify(newTasks));
@@ -29,13 +29,11 @@ describe('check the localStorage', () => {
         description: 'Mátyás',
         id: 1,
         completed: false,
-        editable: false
-      }
+        editable: false,
+      },
     ];
     removeFromStorage(2);
     const dataStorage = JSON.parse(localStorage.getItem('tasks')) || [];
     expect(dataStorage).toEqual(task1);
   });
 });
-
-
