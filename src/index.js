@@ -1,4 +1,4 @@
-// import './style.css';
+import './style.css';
 
 import updateid from './modules/updateid.js';
 
@@ -7,6 +7,8 @@ import Task from './modules/constructor.js';
 import Storage from './modules/storage.js';
 
 import Interface from './modules/interface.js';
+
+import removeFromStorage from './modules/removeFromStorage.js';
 
 document.addEventListener('DOMContentLoaded', Interface.displayTasks);
 
@@ -28,16 +30,6 @@ document.querySelector('.form').addEventListener('submit', (e) => {
 
   Interface.clearFields();
 });
-
-const removeFromStorage = (id) => {
-  let tasks = [];
-  if (localStorage.getItem('tasks') !== null) {
-    tasks = JSON.parse(localStorage.getItem('tasks'));
-  }
-  const newTasks = tasks.filter((task) => task.id !== +id);
-  localStorage.setItem('tasks', JSON.stringify(newTasks));
-  updateid.storage();
-};
 
 document.querySelector('#toDoItems').addEventListener('click', (e) => {
   if (e.target.textContent === '⋮') {
@@ -89,5 +81,3 @@ document.querySelector('#clearAllBtn').addEventListener('click', () => {
   updateid.storage();
   Interface.displayTasks();
 });
-
-export default removeFromStorage;
