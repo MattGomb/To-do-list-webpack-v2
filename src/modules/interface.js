@@ -47,6 +47,8 @@ export default class Interface {
     deletebtn.innerHTML = '🗑';
     deletebtn.id = `d${task.id}`;
     taskelement.appendChild(deletebtn);
+
+    return taskelement;
   }
 
   static clearFields() {
