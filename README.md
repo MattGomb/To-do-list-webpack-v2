@@ -41,7 +41,7 @@ To get a local copy up and running follow these simple example steps.
 
 ### Prerequisites
 
-- Installation of Node.js, Node Package Manager, webpack module bundler
+- Installation of Node.js, Node Package Manager, webpack module bundler, Jest testing environment, and Babel
 
 Functioning computer
 Internet connection
@@ -74,13 +74,17 @@ Basic understanding of Git and GitHub
 
 👤 **Author1**
 
-- GitHub: [@vvoo21](https://github.com/vvoo21)
-- Twitter: [@vaneoliverosp](https://twitter.com/vaneoliverosp)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/gombos-mátyás-28139771/)
-
 - GitHub: [@MattGomb](https://github.com/MattGomb)
 - Twitter: [@MtysGombos1](https://twitter.com/MtysGombos1)
 - LinkedIn: [LinkedIn](https://www.linkedin.com/in/vaneoliverosp/)
+
+
+👤 **Author2**
+
+
+- GitHub: [@vvoo21](https://github.com/vvoo21)
+- Twitter: [@vaneoliverosp](https://twitter.com/vaneoliverosp)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/gombos-mátyás-28139771/)
 
 
 ## 🤝 Contributing
