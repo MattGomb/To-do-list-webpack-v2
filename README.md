@@ -74,9 +74,13 @@ Basic understanding of Git and GitHub
 
 👤 **Author1**
 
+- GitHub: [@vvoo21](https://github.com/vvoo21)
+- Twitter: [@vaneoliverosp](https://twitter.com/vaneoliverosp)
+- LinkedIn: [LinkedIn](https://linkedin.com/in/gombos-mátyás-28139771/)
+
 - GitHub: [@MattGomb](https://github.com/MattGomb)
 - Twitter: [@MtysGombos1](https://twitter.com/MtysGombos1)
-- LinkedIn: [LinkedIn](https://linkedin.com/in/gombos-mátyás-28139771/)
+- LinkedIn: [LinkedIn](https://www.linkedin.com/in/vaneoliverosp/)
 
 
 ## 🤝 Contributing
