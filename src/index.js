@@ -62,6 +62,14 @@ document.querySelector('#toDoItems').addEventListener('keypress', (e) => {
   }
 });
 
-document.querySelector('#toDoItems').addEventListener('change', toggleCompleted);
+document.querySelector('#toDoItems').addEventListener('change', (e) => {
+  const { id }= e.target.parentElement.parentElement;
+  const completed = e.target.checked;
+  toggleCompleted(id, completed);
+});
 
-document.querySelector('#clearAllBtn').addEventListener('click', clearAll);
+document.querySelector('#clearAllBtn').addEventListener('click', () => {
+  clearAll();
+  updateid.storage();
+  Interface.displayTasks();
+});
