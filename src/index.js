@@ -14,7 +14,6 @@ import toggleCompleted from './modules/toggleCompleted.js';
 
 import clearAll from './modules/clearAll.js';
 
-
 document.addEventListener('DOMContentLoaded', Interface.displayTasks);
 
 document.querySelector('.form').addEventListener('submit', (e) => {
@@ -63,7 +62,7 @@ document.querySelector('#toDoItems').addEventListener('keypress', (e) => {
 });
 
 document.querySelector('#toDoItems').addEventListener('change', (e) => {
-  const { id }= e.target.parentElement.parentElement;
+  const { id } = e.target.parentElement.parentElement;
   const completed = e.target.checked;
   toggleCompleted(id, completed);
 });

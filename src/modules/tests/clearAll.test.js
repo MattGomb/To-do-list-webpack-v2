@@ -1,8 +1,8 @@
 /** * @jest-environment jsdom */
 
-import clearAll from "../clearAll";
+import clearAll from '../clearAll.js';
 
-describe("clear all complete task", ()=>{
+describe('clear all complete task', () => {
   const newTasks = [
     {
       description: 'Mátyás',
@@ -25,8 +25,8 @@ describe("clear all complete task", ()=>{
   ];
 
   localStorage.setItem('tasks', JSON.stringify(newTasks));
-  
-  it("clear one task",()=>{
+
+  it('clear one task', () => {
     expect(clearAll()).toHaveLength(1);
-  })
-})
+  });
+});
