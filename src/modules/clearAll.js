@@ -1,6 +1,3 @@
-import updateid from './updateid.js'
-import Interface from '../modules/interface.js';
-
 function clearAll() {
     let tasks = [];
   if (localStorage.getItem('tasks') !== null) {
@@ -8,8 +5,9 @@ function clearAll() {
   }
   const newTasks = tasks.filter((task) => task.completed === false);
   localStorage.setItem('tasks', JSON.stringify(newTasks));
-  updateid.storage();
-  Interface.displayTasks();
+  
+  return newTasks;
+
 }
 
 export default clearAll;
