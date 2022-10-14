@@ -1,4 +1,4 @@
-function toggleCompleted(e) {
+const toggleCompleted = (e) => {
   let tasks = [];
   if (localStorage.getItem('tasks') !== null) {
     tasks = JSON.parse(localStorage.getItem('tasks'));
