@@ -10,6 +10,10 @@ import Interface from './modules/interface.js';
 
 import removeFromStorage from './modules/removeFromStorage.js';
 
+import toggleCompleted from './modules/toggleCompleted.js';
+
+import clearAll from './modules/clearAll.js';
+
 document.addEventListener('DOMContentLoaded', Interface.displayTasks);
 
 document.querySelector('.form').addEventListener('submit', (e) => {
@@ -58,26 +62,13 @@ document.querySelector('#toDoItems').addEventListener('keypress', (e) => {
 });
 
 document.querySelector('#toDoItems').addEventListener('change', (e) => {
-  let tasks = [];
-  if (localStorage.getItem('tasks') !== null) {
-    tasks = JSON.parse(localStorage.getItem('tasks'));
-  }
   const { id } = e.target.parentElement.parentElement;
-  if (e.target.checked) {
-    tasks[id - 1].completed = true;
-  } else {
-    tasks[id - 1].completed = false;
-  }
-  localStorage.setItem('tasks', JSON.stringify(tasks));
+  const completed = e.target.checked;
+  toggleCompleted(id, completed);
 });
 
 document.querySelector('#clearAllBtn').addEventListener('click', () => {
-  let tasks = [];
-  if (localStorage.getItem('tasks') !== null) {
-    tasks = JSON.parse(localStorage.getItem('tasks'));
-  }
-  const newTasks = tasks.filter((task) => task.completed === false);
-  localStorage.setItem('tasks', JSON.stringify(newTasks));
+  clearAll();
   updateid.storage();
   Interface.displayTasks();
 });
