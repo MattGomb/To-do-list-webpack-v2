@@ -2,37 +2,52 @@
 
 import Storage from "../storage.js";
 
-jest.mock('../storage.js');
-
-beforeEach(() => {
-  Storage.mockClear();
-});
-
 window.localStorage = Storage.prototype;
 
-const tasks = [
+describe("test storage functionalities", ()=>{
+  const newTasks = [
     {
       description: 'Mátyás',
       id: 1,
       completed: false,
       editable: false,
-    }
+    },
+    {
+      description: 'Vanessa',
+      id: 2,
+      completed: true,
+      editable: false,
+    },
+    {
+      description: 'Vanessa',
+      id: 3,
+      completed: true,
+      editable: false,
+    },
   ];
 
-  localStorage.setItem('tasks', JSON.stringify(tasks));
+  const task = {
+    description: 'Marco',
+      id: 4,
+      completed: false,
+      editable: false,
+  }
 
-describe('testing class Storage', () => {
-  test('check upDate task', () => {
-    const newTask = [
-        {
-          description: 'Microverse',
-          id: 1,
-          completed: false,
-          editable: false,
-        },
-      ];
-    Storage.updateTask();
-    JSON.parse(localStorage.getItem('tasks')) || [];  
-    expect(tasks.description).toEqual(newTask.description);
-  });
-});
+  const task2 = {
+    description: 'new description',
+      id: 4,
+      completed: false,
+      editable: false,
+  }
+  localStorage.setItem('tasks', JSON.stringify(newTasks));
+  
+  it("getting a task from storage",()=>{
+    expect(Storage.getTasks()).toHaveLength(3);
+  })
+  it('adding a task to storage', () => {
+    expect(Storage.addTask(task)).toHaveLength(4);
+  })
+  it('updating description in storage', () => {
+    expect(Storage.updateTask(task, 'new description')).toStrictEqual(task2);
+  })
+})

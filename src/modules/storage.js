@@ -16,6 +16,9 @@ export default class Storage {
     tasks.push(task);
 
     localStorage.setItem('tasks', JSON.stringify(tasks));
+    
+    return Storage.getTasks();
+ 
   }
 
   static updateTask(task, description) {
@@ -26,5 +29,7 @@ export default class Storage {
     activeTask.description = description;
 
     localStorage.setItem('tasks', JSON.stringify(tasks));
+
+    return activeTask;
   }
 }
